@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item">
+        <p class="font-weight-bold text-white m-0 ml-3">Welcome {{ name }}</p>
+      </li>
+    </ul>
+    <div>
+      <a class="font-weight-bold text-white" (click)="sair()"
+        ><span>Logout</span
+        ><i class="fa fa-sign-out ml-1 text-white" aria-hidden="true"></i
+      ></a>
+    </div>
+  </div>
+</nav>

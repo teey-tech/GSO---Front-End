@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="row d-flex align-items-center">
+    <div class="col-md-6" id="imgRegisterBG"></div>
+    <div class="col-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <h1 class="text-center">Cadastrar</h1>
+          <form>
+            <div class="form-group">
+              <label for="nome">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Your name"
+                [(ngModel)]="user.name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Example: email@email.com"
+                [(ngModel)]="user.email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="senha">Password</label>
+              <input
+                type="password"
+                name="passwor"
+                id="password"
+                class="form-control"
+                placeholder="Exemplo: 12345668"
+                (input)="confirmSenha($event)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmarSenha">Confirm Password:</label>
+              <input
+                type="password"
+                name="confirmPass"
+                id="confirmPass"
+                class="form-control"
+                placeholder="Repeat the password"
+                [(ngModel)]="user.password"
+              />
+            </div>
+            <div class="w-50 mx-auto d-flex justify-content-around mt-3">
+              <button
+                type="submit"
+                routerLink="/login"
+                class="btn btn-outline-danger"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="btn btn-outline-success"
+                (click)="cadastrar()"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
